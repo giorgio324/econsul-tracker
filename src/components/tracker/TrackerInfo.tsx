@@ -19,8 +19,11 @@ const TrackerInfo = ({ data }: Props) => {
       <VisaStatusInfo
         country={data.country}
         uncompletedAmount={uncompletedAmount}
+        percentage={data.progressPercentage}
+        status={data.status}
       />
       <ProgressBar
+        country={data.country}
         completedAmount={completedAmount}
         percentage={data.progressPercentage}
       />

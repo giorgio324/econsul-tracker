@@ -1,6 +1,19 @@
+import { useFetchTracker } from './hooks/async/useFetchTracker';
+
 const App = () => {
+  const { data, isLoading, error } = useFetchTracker();
+  if (isLoading) {
+    return <h1>loading...</h1>;
+  }
+  if (error) {
+    return <h1>error</h1>;
+  }
   return (
-    <h1 className='text-3xl font-bold underline font-nunito'>Hello world!</h1>
+    <div>
+      {data?.steps.map((step) => (
+        <h1 key={step.id}>{step.title}</h1>
+      ))}
+    </div>
   );
 };
 

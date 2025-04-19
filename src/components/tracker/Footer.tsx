@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className='mt-[4.375rem]'>
+    <footer className='mt-[4.375rem] py-[1.125rem]'>
       <div className='flex gap-5 font-open-sans text-xs justify-center items-center text-terms'>
         <a href='#'>Privacy Policy</a>
         <a href='#'>Terms & Conditions</a>

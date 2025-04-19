@@ -35,7 +35,6 @@ const CompletedStep = ({ step, index, additionalInfo }: Props) => {
           <p className='bg-uncompleted-step w-[3.125rem] h-[3.125rem] rounded-full flex justify-center items-center font-lato text-step-black'>
             {index}
           </p>
-          <div className='flex-1 w-[2px] h-full bg-black opacity-5'></div>
         </div>
       )}
       <div className='flex-1 font-lato'>

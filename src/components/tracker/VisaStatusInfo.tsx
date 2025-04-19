@@ -27,7 +27,7 @@ const VisaStatusInfo = ({
   return (
     <section className='flex items-center gap-6 min-h-[11.25rem]'>
       {percentage === 100 ? (
-        <img src={mail} alt={``} className='w-28' />
+        <img src={mail} alt={`results recieved`} className='w-28' />
       ) : (
         <img src={flag} alt={`${country} flag`} />
       )}

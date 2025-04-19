@@ -2,6 +2,7 @@ import { useFetchTracker } from './hooks/async/useFetchTracker';
 import Header from './components/tracker/Header';
 import TrackerInfo from './components/tracker/TrackerInfo';
 import ProgressSteps from './components/tracker/progressSteps/ProgressSteps';
+import Footer from './components/tracker/Footer';
 
 const App = () => {
   const { data, isLoading, error } = useFetchTracker();
@@ -17,6 +18,7 @@ const App = () => {
       <Header name='Sabuti Vizadze' id={26032832} />
       <TrackerInfo data={data} />
       <ProgressSteps data={data} />
+      <Footer />
     </>
   );
 };

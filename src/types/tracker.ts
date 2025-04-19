@@ -1,14 +1,14 @@
 export type Tracker = {
-  steps: Steps;
+  steps: Step[];
   progressPercentage: number;
   totalSteps: number;
   country: string;
   status: 'In Progress' | 'Approved' | 'Refused';
 };
 
-type Steps = {
+export type Step = {
   id: number;
   title: string;
   description: string;
   status: string;
-}[];
+};

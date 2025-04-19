@@ -21,6 +21,7 @@ export default {
         'light-white': '#FEFEFE',
         'current-step': '#FFC700',
         'uncompleted-step': '#E4E4E4',
+        'step-black': '#323031',
       },
     },
   },

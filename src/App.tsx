@@ -1,7 +1,6 @@
 import Header from './components/tracker/Header';
 import Footer from './components/tracker/Footer';
 import Tracker from './components/tracker/Tracker';
-
 const App = () => {
   return (
     <>

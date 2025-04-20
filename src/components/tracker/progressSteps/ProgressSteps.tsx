@@ -1,11 +1,27 @@
+import { useWindowSize } from '@react-hook/window-size';
 import { Tracker } from '../../../types/tracker';
 import CompletedStep from './CompletedStep';
 import FinalDecision from './FinalDecision';
+import Confetti from 'react-confetti';
+import { useEffect, useState } from 'react';
 
 type Props = {
   data: Tracker | undefined;
 };
 const ProgressSteps = ({ data }: Props) => {
+  const [width, height] = useWindowSize();
+  const [showConfetti, setShowConfetti] = useState(false);
+
+  useEffect(() => {
+    if (data?.status === 'Approved') {
+      setShowConfetti(true);
+      const timer = setTimeout(() => {
+        setShowConfetti(false);
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [data?.status]);
+
   return (
     <>
       {data?.status === 'In Progress' && (
@@ -20,6 +36,16 @@ const ProgressSteps = ({ data }: Props) => {
       )}
       {data?.status === 'Approved' && (
         <div className='mt-14'>
+          {showConfetti && (
+            <Confetti
+              width={width}
+              height={height}
+              recycle={false}
+              numberOfPieces={100}
+              tweenDuration={2000}
+              gravity={0.3}
+            />
+          )}
           <FinalDecision
             title='Approved!'
             description={

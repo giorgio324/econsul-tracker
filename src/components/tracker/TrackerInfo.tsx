@@ -1,4 +1,5 @@
 import { Tracker } from '../../types/tracker';
+import Container from '../shared/Container';
 import ProgressBar from './ProgressBar';
 import VisaStatusInfo from './VisaStatusInfo';
 
@@ -15,7 +16,7 @@ const TrackerInfo = ({ data }: Props) => {
   const uncompletedAmount = data?.totalSteps - completedAmount;
 
   return (
-    <div className='pl-[1.438rem] pr-[1.688rem]'>
+    <Container>
       <VisaStatusInfo
         country={data.country}
         uncompletedAmount={uncompletedAmount}
@@ -27,7 +28,7 @@ const TrackerInfo = ({ data }: Props) => {
         completedAmount={completedAmount}
         percentage={data.progressPercentage}
       />
-    </div>
+    </Container>
   );
 };
 

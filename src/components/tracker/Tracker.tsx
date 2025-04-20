@@ -1,4 +1,5 @@
 import { useFetchTracker } from '../../hooks/async/useFetchTracker';
+import Container from '../shared/Container';
 import LoadingSpinner from '../shared/LoadingSpinner';
 import ProgressSteps from './progressSteps/ProgressSteps';
 import TrackerInfo from './TrackerInfo';
@@ -7,16 +8,22 @@ const Tracker = () => {
   const { data, isLoading, error } = useFetchTracker();
   if (isLoading) {
     return (
-      <div className='pl-[1.438rem] pr-[1.688rem] mt-[1.875rem]'>
-        <LoadingSpinner />
-      </div>
+      <Container>
+        <div className='mt-[1.875rem]'>
+          <LoadingSpinner />
+        </div>
+      </Container>
     );
   }
   if (error) {
     return (
-      <div className='pl-[1.438rem] pr-[1.688rem] mt-[1.875rem]'>
-        <p className='font-nunito font-medium text-red-500'>{error.message}</p>
-      </div>
+      <Container>
+        <div className=' mt-[1.875rem]'>
+          <p className='font-nunito font-medium text-red-500'>
+            {error.message}
+          </p>
+        </div>
+      </Container>
     );
   }
   return (

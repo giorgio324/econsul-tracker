@@ -15,7 +15,7 @@ const CompletedStep = ({ step, index, additionalInfo }: Props) => {
     step.status === 'active' ? 'opacity-100' : 'text-black opacity-20';
 
   return (
-    <div className={`flex gap-10 px-9 py-8 ${bgColor}`}>
+    <div className={`flex gap-10 px-9 py-[1.125rem] ${bgColor}`}>
       {step.status === 'completed' && (
         <div className='flex flex-col items-center gap-5 mb-1 w-[3.125rem]'>
           <img

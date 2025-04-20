@@ -18,7 +18,12 @@ const CompletedStep = ({ step, index, additionalInfo }: Props) => {
     <div className={`flex gap-10 px-9 py-8 ${bgColor}`}>
       {step.status === 'completed' && (
         <div className='flex flex-col items-center gap-5 mb-1 w-[3.125rem]'>
-          <img src={completedIcon} alt={`${step.title} Completed`} />
+          <img
+            src={completedIcon}
+            alt={`${step.title} Completed`}
+            width={28}
+            height={28}
+          />
           <div className='flex-1 w-[2px] h-full bg-black opacity-5'></div>
         </div>
       )}

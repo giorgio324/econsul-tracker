@@ -21,15 +21,21 @@ const ApprovedStats = ({ status, country }: Props) => {
   return (
     <div className='mt-14'>
       {showConfetti && (
-        <Confetti
-          width={width}
-          height={height}
-          recycle={false}
-          numberOfPieces={100}
-          tweenDuration={2000}
-          gravity={0.3}
-        />
+        <div
+          className='fixed top-0 left-0 w-screen h-screen z-50 pointer-events-none'
+          style={{ overflow: 'hidden' }}
+        >
+          <Confetti
+            width={width}
+            height={height}
+            recycle={false}
+            numberOfPieces={100}
+            tweenDuration={2000}
+            gravity={0.3}
+          />
+        </div>
       )}
+
       <FinalDecision
         title='Approved!'
         description={

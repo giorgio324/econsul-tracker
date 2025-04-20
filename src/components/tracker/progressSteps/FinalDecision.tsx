@@ -12,7 +12,12 @@ const FinalDecision = ({ description, title, additionalInfo }: Props) => {
     <Container>
       <div className='flex gap-10'>
         <div className='flex flex-col items-center gap-5 mb-1 w-[3.125rem]'>
-          <img src={completedIcon} alt={`Successfully passed`} />
+          <img
+            src={completedIcon}
+            alt={`Successfully passed`}
+            width={28}
+            height={28}
+          />
         </div>
         <div className='flex-1 font-lato'>
           <h3 className={'font-bold'}>{title}</h3>

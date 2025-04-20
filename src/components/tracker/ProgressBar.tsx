@@ -29,12 +29,16 @@ const ProgressBar = ({ completedAmount, percentage, country }: Props) => {
             src={flag}
             alt={`100% Done!`}
             className='w-9 h-9 absolute right-0 top-1/2 z-10 -translate-y-1/2 translate-x-2'
+            width={36}
+            height={36}
           />
         ) : (
           <img
             src={post}
             alt={`${completedAmount} Steps Done`}
             className='w-9 h-9 absolute right-0 top-1/2 z-10 -translate-y-1/2 translate-x-2'
+            width={36}
+            height={36}
           />
         )}
       </div>

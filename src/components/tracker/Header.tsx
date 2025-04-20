@@ -15,7 +15,13 @@ const Header = ({ name, id }: Props) => {
             <p className='text-[0.938rem] font-nunito text-light-gray'>
               {name}
             </p>
-            <img src={flag} alt='Change language' className='w-6' />
+            <img
+              src={flag}
+              alt='Change language'
+              className='w-6'
+              width={24}
+              height={24}
+            />
           </div>
           <p className='text-[0.938rem] font-nunito text-light-gray py-[0.625rem]'>
             ID: {id}

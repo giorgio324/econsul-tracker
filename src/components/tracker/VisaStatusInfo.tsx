@@ -27,9 +27,15 @@ const VisaStatusInfo = ({
   return (
     <section className='flex items-center gap-6 min-h-[11.25rem]'>
       {percentage === 100 ? (
-        <img src={mail} alt={`results recieved`} className='w-28' />
+        <img
+          src={mail}
+          alt={`results recieved`}
+          className='w-28'
+          width={112}
+          height={112}
+        />
       ) : (
-        <img src={flag} alt={`${country} flag`} />
+        <img src={flag} alt={`${country} flag`} width={112} height={112} />
       )}
       {status === 'In Progress' && (
         <div className='flex flex-col gap-2 mt-8'>
